@@ -26,7 +26,7 @@ module.exports = {
         use: [isDev ? 'style-loader' : {
           loader: MiniCssExtractPlugin.loader,
           options: {
-            publicPath: '../../'
+            publicPath: '../'
           }
         },
           {
@@ -55,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './pages/[name]/[name].[contenthash].css',
+      filename: '[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
